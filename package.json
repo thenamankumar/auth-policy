@@ -1,0 +1,19 @@
+{
+  "name": "auth-policy",
+  "version": "0.0.0",
+  "description": "Authorization Policy Builder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hereisnaman/auth-policy.git"
+  },
+  "author": "Naman Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hereisnaman/auth-policy/issues"
+  },
+  "homepage": "https://github.com/hereisnaman/auth-policy#readme"
+}
