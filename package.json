@@ -6,7 +6,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,10 @@
     "url": "https://github.com/hereisnaman/auth-policy/issues"
   },
   "homepage": "https://github.com/hereisnaman/auth-policy#readme",
-  "dependencies": {
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "jest": "^25.3.0",
+    "ts-jest": "^25.3.1",
     "typescript": "^3.8.3"
   }
 }
