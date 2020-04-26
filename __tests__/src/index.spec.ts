@@ -8,7 +8,7 @@ describe('Policy', () => {
       expect(
         policy
           .can(null)
-          .perform('read')
+          .perform(':read')
           .on(null),
       ).toBe(false);
     });
@@ -34,6 +34,20 @@ describe('Policy', () => {
         action,
         value,
       });
+    });
+
+    test('works with multi level nested policy', () => {
+      const policy = new Policy();
+      policy.include('user', p =>
+        p.include('photo', cp => cp.register('read', () => true)),
+      );
+
+      expect(
+        policy
+          .can(null)
+          .perform('user:photo:read')
+          .on(null),
+      ).toBe(true);
     });
   });
 

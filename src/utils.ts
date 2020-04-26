@@ -1,11 +1,14 @@
 export const getPolicyName = (action: string): string => {
-  const tokens = action.split(':');
+  const tokens = action.replace(/^:/, '').split(':');
 
   return tokens.length > 1 ? tokens[0] : '';
 };
 
-export const getSubAction = (action: string): string =>
-  action.replace(/^[^:]*:/, ':');
+export const getSubAction = (action: string): string => {
+  const subAction = action.replace(/^[^:]*:/, '');
+
+  return subAction.indexOf(':') === -1 ? ':' + subAction : subAction;
+};
 
 export const getConcernName = (action: string): string => {
   const tokens = action.split(':');
